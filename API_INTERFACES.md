@@ -28,7 +28,7 @@
 - **返回**: 验证码图片内容（二进制）
 
 ### 3. 用户登录接口
-- **URL**: `desk.ctyun.cn:8810/api/auth/client/login`
+- **URL**: `https://desk.ctyun.cn:8810/api/auth/client/login`
 - **方法**: POST（通过页面监听）
 - **用途**: 用户登录认证接口
 - **代码位置**: `run.py` 第42行
@@ -41,7 +41,7 @@
     - "请输入图形验证码"
 
 ### 4. 云电脑列表接口
-- **URL**: `desk.ctyun.cn:8810/api/desktop/client/pageDesktop`
+- **URL**: `https://desk.ctyun.cn:8810/api/desktop/client/pageDesktop`
 - **方法**: GET/POST（通过页面监听）
 - **用途**: 获取用户的云电脑列表信息
 - **代码位置**: `run_first.py` 第21行
@@ -75,9 +75,9 @@
 
 ### 关键参数配置
 
-- `INTERVAL_MINUTE`: 保活任务执行间隔（分钟），建议不超过60分钟
-- `ALIVE_SECOND`: 云电脑页面保持打开时间（秒），建议不少于80秒
-- `TARGETS`: 需要保活的云电脑编号列表，-1表示全部
+- `INTERVAL_MINUTE` (默认: 45): 保活任务执行间隔（分钟），建议不超过60分钟
+- `ALIVE_SECOND` (默认: 80): 云电脑页面保持打开时间（秒），建议不少于80秒
+- `TARGETS` (默认: -1): 需要保活的云电脑编号列表，-1表示全部
 
 ## 技术实现
 
